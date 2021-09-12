@@ -1,0 +1,12 @@
+{
+    "name": "p3",
+    "version": "1.0.0",
+    "description": "projet 03",
+    "main": "index.js",
+    "scripts": {
+      "sass": "sass --watch ./sass/main.scss:./css/style.css",
+      "prefix": "postcss --watch ./css/style.css --use autoprefixer -d ./css/prefixed/"
+    },
+    "author": "CHEIKH INES",
+    "license": "ISC"
+  }
