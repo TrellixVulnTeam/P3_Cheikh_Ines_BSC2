@@ -7,21 +7,25 @@
             rel="stylesheet"
             href="fontawesome/fontawesome-free-5.15.2-web/css/all.css"/>
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="sass/main.scss">
         <link rel="import" href="A_la_francaise.html"/>
         <link rel="import" href="La_note_enchantee.html"/>
         <link rel="import" href="La_palette_du_gout.html"/>
         <link rel="import" href="Le_delice_des_sens.html"/>
+        <link rel="shortcut icon" href="images/logo/ohmyfood@2x.svg" type="image/x-icon">
+        <title>Bienvenue chez OhMyFood</title>
+
     </head>
 
     <body> 
         <header class="header">
-            <div id="header_logo">
+            <div class="header_logo">
                 <a href="index.html">
                 <img src="images/logo/ohmyfood.png" alt="icon OHMYFOOD"/>
                 </a>
             </div>
-            <div class="search_location">
-                <label for="search_icon"> <i class="fas fa-map-marker-alt"></i> </label>
+            <div class="header_search">
+                <label for="search_icon"><i class="fas fa-map-marker-alt"></i></label>
                 <input type="search" placeholder="Paris, Belleville"/>
             </div>
 
@@ -31,7 +35,7 @@
                 <h2 class="reserve_subtitle">Découvrez des restaurants d'exception,<br>
                 sélectionnés par nos soins</h2>
 
-                <button class="reserve_btn"><a href="#"><span>Explorer nos restaurants</span></a></button>
+                <a href="#"><button class="reserve_btn" type="button">Explorer nos restaurants</button></a>
             </nav>
         </header>
 
@@ -130,7 +134,7 @@
         </main>
     </body>
 
-    <footer> 
+    <footer class="footer"> 
         <div class="footer_logo">
             <img src="images/logo/ohmyfood@2x.svg" alt="mini logo"/>
         </div>
