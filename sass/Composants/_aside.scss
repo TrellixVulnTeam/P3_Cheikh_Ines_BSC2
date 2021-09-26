@@ -1,0 +1,14 @@
+.step {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    &_btn {
+        display: inline-block;
+        border: 2px solid rgb(212, 212, 212);
+        border-radius: 40px;
+        align-items: center;
+        height: 30px;
+        margin: 0 10px 10px 0;
+    }
+}

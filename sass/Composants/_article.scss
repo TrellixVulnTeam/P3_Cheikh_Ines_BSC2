@@ -1,0 +1,21 @@
+.food {
+    padding: 20px;
+
+    &_card {
+        box-shadow: 0 5px 10px grey;
+        border-radius: 20px;
+        height: 100%;
+    }
+
+    &_img {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        height: calc(100% - 80px);
+        object-fit: cover;
+        border-radius: 20px 20px 0px 0px;
+    }
+}
+figure {
+    margin: 0;
+}
