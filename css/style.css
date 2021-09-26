@@ -6,6 +6,15 @@ body {
   margin: 0;
 }
 
+a, span, h3, h4 {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+h1, h2 {
+  font-family: "Shrikhand", sans-serif;
+}
+
 .food {
   padding: 20px;
 }
