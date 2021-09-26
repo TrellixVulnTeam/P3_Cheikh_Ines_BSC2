@@ -1,0 +1,32 @@
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer {
+    background: $color-footer;
+    text-align: left;
+    color: #fff;
+    padding: 20px;
+    line-height: 1.6em;
+    font-family: $font-text;
+
+    &_logo img{
+        filter: invert(1);
+        max-width: 100px;
+    }
+
+    &_icon {
+        filter: invert(1);
+        margin-right: 8px;
+        height: 12px;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    ul {
+        padding: 0;
+    }
+}
