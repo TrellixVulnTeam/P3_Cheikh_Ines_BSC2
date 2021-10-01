@@ -1,32 +1,22 @@
 .footer a {
     color: #fff;
-    text-decoration: none;
 }
 
 .footer {
+    color: #fff;
     background: $color-footer;
     text-align: left;
-    color: #fff;
     padding: 20px;
-    line-height: 1.6em;
-    font-family: $font-text;
+    line-height: 1.8rem; 
 
-    &_logo img{
+    &_logo img {
         filter: invert(1);
         max-width: 100px;
     }
 
     &_icon {
         filter: invert(1);
+        height: 14px;
         margin-right: 8px;
-        height: 12px;
-    }
-
-    li {
-        list-style: none;
-    }
-
-    ul {
-        padding: 0;
     }
 }

@@ -4,9 +4,11 @@
     align-items: center;
 
     &_logo img {
+        display: block;
         height: 30px;
         width: 150px;
         padding: 10px;
+        align-items: center;
     }
 
     &_search {
@@ -15,9 +17,9 @@
         width: 100%;
         padding: 15px;
         text-align: center;
+        box-shadow: inset 0px 4px 3px -2px rgba(0,0,0,0.14);
         
         input {
-            border: none;
             background-color: $color-search;
             text-align: center;
         }
@@ -38,19 +40,8 @@
     &_subtitle {
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: normal;
     margin-top: 20px;
-    }
-
-    &_btn {
-        border: 0;
-        border-radius: 50px;
-        padding: 15px;
-        background: linear-gradient(#df7cd5, #ab69d6);
-        color: white;
-        text-decoration: none;
-        margin-top: 20px;
-        margin-bottom: 20px;
     }
 }

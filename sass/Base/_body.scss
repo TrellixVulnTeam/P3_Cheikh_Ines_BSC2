@@ -1,11 +1,14 @@
-body {
+* {
     padding: 0;
     margin: 0;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    font: inherit;
 }
 
 a, span, h3, h4 {
     font-family: $font-text;
-    text-decoration: none;
 }
 
 h1, h2 {

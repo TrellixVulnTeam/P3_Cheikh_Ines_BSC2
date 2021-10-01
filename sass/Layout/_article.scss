@@ -1,6 +1,12 @@
 .food {
     padding: 20px;
 
+    &_cards {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
     &_card {
         box-shadow: 0 5px 10px grey;
         border-radius: 20px;
@@ -8,14 +14,30 @@
     }
 
     &_img {
-        display: block;
         max-width: 100%;
         width: 100%;
-        height: calc(100% - 80px);
+        height: 170px;
         object-fit: cover;
         border-radius: 20px 20px 0px 0px;
     }
+
+    &_legend {
+        display: flex;
+        flex-direction: row;
+        color: black;
+        line-height: 0;
+        justify-content: space-between;
+    }
+
+    &_heart {
+        size: 2px;
+    }
 }
-figure {
-    margin: 0;
+
+figcaption {
+    display: inline-block;
+    text-align: center;
+    color: #3A8568;
+    background-color: #a9e0d1;
+    padding: 8px;
 }
