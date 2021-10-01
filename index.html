@@ -6,6 +6,7 @@
         <link
             rel="stylesheet"
             href="fontawesome/fontawesome-free-5.15.2-web/css/all.css"/>
+        <script src="https://kit.fontawesome.com/7399728304.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="sass/main.scss">
         <link rel="import" href="A_la_francaise.html"/>
@@ -14,10 +15,10 @@
         <link rel="import" href="Le_delice_des_sens.html"/>
         <link rel="shortcut icon" href="images/logo/ohmyfood@2x.svg" type="image/x-icon">
         <title>Bienvenue chez OhMyFood</title>
-
     </head>
 
-    <body> 
+    <body>
+    <div class="page_content">
         <header class="header">
             <div class="header_logo">
                 <a href="index.html">
@@ -40,7 +41,7 @@
         </header>
 
         <main>
-            <aside class="step">
+            <section class="step">
                 <h2 class="step_title">Fonctionnement</h2>
 
                 <a href="#" class="step_btn">
@@ -60,76 +61,86 @@
                     <span class="step_icon"><i class="fas fa-store"></i></span>
                     <span class="step_text">Dégustez au restaurant</span>
                 </a>
-            </aside>
+            </section>
 
             <section class="food">
                 <h2 class="food_title">Restaurants</h2>
 
-                <article class="food_card">
-                    <a href="La_palette_du_gout.html">
-                    <figure>
-                        <img src="images/restaurants/restau1.jpg" 
-                        alt="plat gastronomique"
-                        class="food_img"/>
-                    <figcaption>Nouveau</figcaption>
-                    </figure>
+                <div class="food_cards">
+                    <article class="food_card">
+                        <a href="La_palette_du_gout.html">
+                        <figure>
+                            <img src="images/restaurants/restau1.jpg" 
+                            alt="plat gastronomique"
+                            class="food_img"/>
+                        <figcaption>Nouveau</figcaption>
+                        </figure>
 
-                    <div class="food_legend">
-                        <h3 class="food_legend_title">La palette du goût</h3>
-                        <h4 class="food_legend_subtitle">Ménilmontant</h4>
-                        <span class="food_heart"><i class="far fa-heart"></i></span>
-                    </div>
-                    </a>
-                </article>
+                        <div class="food_legend">
+                            <div class="food_name">
+                            <h3>La palette du goût</h3>
+                            <h4>Ménilmontant</h4>
+                            </div>
+                            <span class="food_heart"><i class="far fa-heart"></i></span>
+                        </div>
+                        </a>
+                    </article>
 
-                <article class="food_card">
-                    <a href="La_note_enchantee.html">
-                    <figure>
-                        <img src="images/restaurants/restau2.jpg" 
-                        alt="plat gastronomique"
-                        class="food_img"/>
-                    <figcaption>Nouveau</figcaption>
-                    </figure>
+                    <article class="food_card">
+                        <a href="La_note_enchantee.html">
+                        <figure>
+                            <img src="images/restaurants/restau2.jpg" 
+                            alt="plat gastronomique"
+                            class="food_img"/>
+                        <figcaption>Nouveau</figcaption>
+                        </figure>
 
-                    <div class="food_legend">
-                        <h3 class="food_legend_title">La note enchantée</h3>
-                        <h4 class="food_legend_subtitle">Charonne</h4>
-                        <span class="food_heart"><i class="far fa-heart"></i></span>
-                    </div>
-                    </a>
-                </article>
+                        <div class="food_legend">
+                            <div class="food_name">
+                            <h3>La note enchantée</h3>
+                            <h4>Charonne</h4>
+                            </div>
+                            <span class="food_heart"><i class="far fa-heart"></i></span>
+                        </div>
+                        </a>
+                    </article>
 
-                <article class="food_card">
-                    <a href="A_la_francaise.html">
-                    <figure>
-                        <img src="images/restaurants/restau3.jpg" 
-                        alt="plat gastronomique"
-                        class="food_img"/>
-                    </figure>
+                    <article class="food_card">
+                        <a href="A_la_francaise.html">
+                        <figure>
+                            <img src="images/restaurants/restau3.jpg" 
+                            alt="plat gastronomique"
+                            class="food_img"/>
+                        </figure>
 
-                    <div class="food_legend">
-                        <h3 class="food_legend_title">À la française</h3>
-                        <h4 class="food_legend_subtitle">Cité Rouge</h4>
-                        <span class="food_heart"><i class="far fa-heart"></i></span>
-                    </div>
-                    </a>
-                </article>
+                        <div class="food_legend">
+                            <div class="food_name">
+                            <h3>À la française</h3>
+                            <h4>Cité Rouge</h4>
+                            </div>
+                            <span class="food_heart"><i class="far fa-heart"></i></span>
+                        </div>
+                        </a>
+                    </article>
 
-                <article class="food_card">
-                    <a href="Le_delice_des_sens.html">
-                    <figure>
-                        <img src="images/restaurants/restau4.jpg" 
-                        alt="plat gastronomique"
-                        class="food_img"/>
-                    </figure>
+                    <article class="food_card">
+                        <a href="Le_delice_des_sens.html">
+                        <figure>
+                            <img src="images/restaurants/restau4.jpg" 
+                            alt="plat gastronomique"
+                            class="food_img"/>
+                        </figure>
 
-                    <div class="food_legend">
-                        <h3 class="food_legend_title">Le délice des sens</h3>
-                        <h4 class="food_legend_subtitle">Folie-Méricourt</h4>
-                        <span class="food_heart"></span><i class="far fa-heart"></i>
-                    </div>
-                    </a>
-                </article>
+                        <div class="food_legend">
+                            <div class="food_name">
+                            <h3>Le délice des sens</h3>
+                            <h4>Folie-Méricourt</h4>
+                            </div>
+                            <span class="food_heart"><i class="far fa-heart"></i></span>
+                        </div>
+                        </a>
+                    </article>
+                </div>
             </section>
         </main>
     </body>
@@ -171,4 +182,5 @@
             </li>
         </ul>
     </footer>
+    </div>
 </html> 
