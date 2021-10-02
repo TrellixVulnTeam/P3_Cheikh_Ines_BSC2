@@ -9,8 +9,26 @@
 
 a, span, h3, h4 {
     font-family: $font-text;
+    font-size: 13px;
 }
 
 h1, h2 {
     font-family: $font-title;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+
+h3{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.reserve_btn, .step_btn, .food_card {
+    box-shadow: 3px 3px 5px $color-shadow;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
