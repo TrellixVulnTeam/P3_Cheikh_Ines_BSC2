@@ -1,7 +1,9 @@
 @import "./Utils/variables";
+@import "./Utils/_mixins.scss";
 @import "./Base/body";
 @import "./Layout/article";
 @import "./Layout/section";
+@import "./Layout/_menu.scss";
 @import "./Layout/header";
 @import "./Layout/footer";
 @import "./Composants/btn";

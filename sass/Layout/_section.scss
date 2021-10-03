@@ -1,6 +1,5 @@
 .step {
-    display: flex;
-    flex-direction: column;
+    @include flex;
     padding: 20px;
     gap: 20px;
 
