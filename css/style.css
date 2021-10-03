@@ -159,8 +159,8 @@ figcaption {
   flex-direction: column;
   position: relative;
   background-color: #F6F6F6;
-  gap: 30px;
-  padding: 20px 10px 0px 10px;
+  gap: 20px;
+  padding: 20px 10px 30px 10px;
   border-radius: 30px 30px 0 0;
 }
 .menu_title {
@@ -168,8 +168,10 @@ figcaption {
   flex-direction: row;
   justify-content: space-between;
 }
-.menu_title h1 {
-  font-size: 25px;
+.menu_title h1, .menu_title span {
+  font-size: 20px;
+  padding: 10px;
+  font-family: "Shrikhand", sans-serif;
 }
 .menu_subtitles {
   display: flex;
