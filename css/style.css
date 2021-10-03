@@ -1,6 +1,18 @@
 /*Couleurs*/
 /*Police de font*/
+@font-face {
+  font-family: "Shrikhand";
+  src: url(/police/Shrikhand/Shrikhand-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(/police/Roboto/Roboto-Regular.ttf) format("truetype");
+}
 /*Type de font*/
+/*Flex*/
+/*Box-shadow*/
+/*Boutons*/
+/*Medias Queries*/
 * {
   padding: 0;
   margin: 0;
@@ -26,16 +38,17 @@ h3 {
   font-size: 15px;
 }
 
-.reserve_btn, .step_btn, .food_card {
-  box-shadow: 3px 3px 5px #c5c5c5;
-}
-
 main {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
 
+.reserve_btn, .step_btn, .food_card, .menu_card {
+  box-shadow: 3px 3px 5px #c5c5c5;
+}
+
+/*Page index*/
 .food {
   display: flex;
   flex-direction: column;
@@ -52,7 +65,7 @@ main {
   gap: 20px;
 }
 .food_card {
-  box-shadow: 0 5px 10px grey;
+  background-color: white;
   border-radius: 12px;
   height: 200px;
 }
@@ -64,6 +77,9 @@ main {
 }
 .food_img {
   object-position: bottom;
+}
+.food_img2 {
+  object-position: 100% 62%;
 }
 .food_legend {
   display: flex;
@@ -132,10 +148,67 @@ figcaption {
   margin-left: 8px;
 }
 
+/*Pages restaurants*/
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.menu_page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #F6F6F6;
+  gap: 30px;
+  padding: 20px 10px 0px 10px;
+  border-radius: 30px 30px 0 0;
+}
+.menu_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu_title h1 {
+  font-size: 25px;
+}
+.menu_subtitles {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5rem;
+}
+.menu_subtitle {
+  font-weight: normal;
+}
+.menu_underline {
+  position: relative;
+  border: solid #99E2D0 1px;
+  width: 10%;
+}
+.menu_card {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 12px;
+  justify-content: space-between;
+  height: 55px;
+}
+.menu_price {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 30px 12px 0 0;
+}
+.menu_legend {
+  padding: 10px 0 10px 5px;
+  line-height: 1.2rem;
+}
+
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.header img {
+  width: 100%;
 }
 .header_logo img {
   display: block;
@@ -176,6 +249,13 @@ figcaption {
   font-size: 15px;
 }
 
+.arow i {
+  position: absolute;
+  color: black;
+  left: 0;
+  padding: 20px 0px 20px 15px;
+}
+
 .footer a {
   color: #fff;
 }
@@ -197,7 +277,7 @@ figcaption {
   margin-right: 8px;
 }
 
-.reserve_btn {
+.reserve_btn, .order_btn {
   border: 0;
   border-radius: 50px;
   color: white;

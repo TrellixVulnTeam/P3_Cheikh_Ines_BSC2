@@ -1,6 +1,22 @@
-/*Shadow*/
-@mixin style {
+/*Flex*/
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Box-shadow*/
+@mixin shadow {
   box-shadow: 3px 3px 5px $color-shadow; 
+}
+
+/*Boutons*/
+@mixin btn {
+    border: 0;
+    border-radius: 50px;
+    color: white;
+    padding: 13px;
+    background: linear-gradient(#dd7bd5, #9f63d5);
+    margin: 25px;
 }
 
 /*Medias Queries*/

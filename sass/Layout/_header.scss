@@ -1,7 +1,10 @@
 .header {
-    display: flex;
-    flex-direction: column;
+    @include flex;
     align-items: center;
+
+    & img {
+        width: 100%;
+    }
 
     &_logo img {
         display: block;
@@ -47,3 +50,12 @@
         font-size: 15px;
     }
 }
+
+.arow i{
+    position: absolute;
+    color: black;
+    left: 0;
+    padding: 20px 0px 20px 15px;
+}
+
+
