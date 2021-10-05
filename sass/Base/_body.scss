@@ -5,15 +5,14 @@
     list-style: none;
     border: none;
     font: inherit;
+    font-family: $font-text;
 }
 
 a, span, h3, h4 {
-    font-family: $font-text;
     font-size: 13px;
 }
 
 h1, h2 {
-    font-family: $font-title;
     font-size: $fontSize;
     font-weight: $fontWeight;
 }

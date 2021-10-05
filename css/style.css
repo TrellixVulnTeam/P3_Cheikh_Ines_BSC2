@@ -1,13 +1,5 @@
 /*Couleurs*/
 /*Police de font*/
-@font-face {
-  font-family: "Shrikhand";
-  src: url(/police/Shrikhand/Shrikhand-Regular.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Roboto";
-  src: url(/police/Roboto/Roboto-Regular.ttf) format("truetype");
-}
 /*Type de font*/
 /*Flex*/
 /*Box-shadow*/
@@ -20,15 +12,14 @@
   list-style: none;
   border: none;
   font: inherit;
+  font-family: "Roboto", sans-serif;
 }
 
 a, span, h3, h4 {
-  font-family: "Roboto", sans-serif;
   font-size: 13px;
 }
 
 h1, h2 {
-  font-family: "Shrikhand", sans-serif;
   font-size: 18px;
   font-weight: bold;
 }
@@ -48,7 +39,41 @@ main {
   box-shadow: 3px 3px 5px #c5c5c5;
 }
 
-/*Page index*/
+/*Fonctionnement*/
+.step {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+.step_btn {
+  background: #F6F6F6;
+  border-radius: 10px;
+  padding: 25px;
+  color: black;
+}
+.step_circle {
+  position: absolute;
+  left: 12px;
+  color: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 20px;
+  background-color: #9356DC;
+  padding: 3px;
+  text-align: center;
+}
+.step_icon {
+  color: grey;
+  margin: 8px;
+  font-size: 15px;
+}
+.step_text {
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+/*Restaurant*/
 .food {
   display: flex;
   flex-direction: column;
@@ -92,12 +117,12 @@ main {
   line-height: 1.2rem;
   padding: 5px 0 5px 8px;
 }
-.food_heart i {
+.food_heart {
   position: relative;
   margin-right: 15px;
   margin-top: 12px;
   font-size: 20px;
-  color: #7b7b7b;
+  color: #9d9d9d;
 }
 
 figure {
@@ -108,44 +133,12 @@ figcaption {
   display: inline-block;
   position: relative;
   top: -135px;
-  right: -210px;
+  right: -215px;
   color: #307e61;
   font-weight: bold;
   font-size: 10px;
   background-color: #a9e0d1;
   padding: 5px 8px 5px 8px;
-}
-
-.step {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  gap: 20px;
-}
-.step_btn {
-  background: #F6F6F6;
-  border-radius: 10px;
-  padding: 25px;
-  color: black;
-}
-.step_circle {
-  position: absolute;
-  left: 12px;
-  color: white;
-  width: 15px;
-  height: 15px;
-  border-radius: 20px;
-  background-color: #9356DC;
-  padding: 3px;
-  text-align: center;
-}
-.step_icon {
-  color: grey;
-  margin: 8px;
-  font-size: 15px;
-}
-.step_text {
-  margin-left: 8px;
 }
 
 /*Pages restaurants*/
@@ -159,9 +152,10 @@ figcaption {
   flex-direction: column;
   position: relative;
   background-color: #F6F6F6;
-  gap: 20px;
+  margin-top: -10px;
   padding: 20px 10px 30px 10px;
   border-radius: 30px 30px 0 0;
+  gap: 20px;
 }
 .menu_title {
   display: flex;
@@ -171,6 +165,8 @@ figcaption {
 .menu_title h1, .menu_title span {
   font-size: 20px;
   padding: 10px;
+}
+.menu_title h1 {
   font-family: "Shrikhand", sans-serif;
 }
 .menu_subtitles {
@@ -258,6 +254,10 @@ figcaption {
   padding: 20px 0px 20px 15px;
 }
 
+.header_img {
+  height: 180px;
+}
+
 .footer a {
   color: #fff;
 }
@@ -286,6 +286,13 @@ figcaption {
   padding: 13px;
   background: linear-gradient(#dd7bd5, #9f63d5);
   margin: 25px;
+}
+
+.step a:hover {
+  background-color: #f4edfe;
+}
+.step a:hover .step_icon {
+  color: #9356DC;
 }
 
 /*# sourceMappingURL=style.css.map */
