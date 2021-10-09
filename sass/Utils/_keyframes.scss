@@ -1,0 +1,92 @@
+/*Fonctionnement couleurs survol*/
+.step a:hover {
+    background-color: $color-hover;
+
+.step_icon {
+    color: $color-primary;
+}
+}
+
+/*CSS chargement page*/
+.loader {
+    display: none;
+
+    & img {
+        width: 100px;
+        height: 100px;
+        -webkit-animation: spin 2s linear infinite;
+        -o-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        position: absolute;
+        margin: auto;
+        top: 0; left: 0; right: 10; bottom: 0;
+    }
+
+    &_text {
+        color: $color-primary;
+        font-family: $font-title;
+        font-size: 30px;
+        width: 50%;
+        height: 5%;
+        position: absolute;
+        margin: auto;
+        top: 0; left: 0; right: 0; bottom: 0;
+        animation: text 3s linear infinite;
+}
+}
+
+/*Animation chargement page*/
+@keyframes spin {
+    0% {
+        transform: retate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+        transition: opacity infinite;
+    }
+}
+
+/*Apparition carte restaurant*/
+.menu {
+    animation: menu 3s;
+}
+
+@keyframes menu {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*Animation coeurs*/
+.food , .menu {  
+    
+    &_heart {
+        display: inline-block;
+        margin-right: 15px;
+        margin-top: 12px;
+        font-size: 20px;
+    }
+
+    &_heart .empty-icon::before {
+        content: "\f004";
+        position: relative;
+        left: 25px;
+        color: #9d9d9d;
+    }
+    &_heart .empty-icon:hover::before{
+        display: none;
+    }
+    &_heart .full-icon::before {
+        content: "\f004";
+        position: relative;
+        color: $color-primary;
+        opacity: 0;
+    }
+    &_heart .full-icon:hover::before{
+    opacity: 1;
+    }
+}

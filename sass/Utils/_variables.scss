@@ -7,16 +7,9 @@ $color-search:#EAEAEA;
 $color-background:#F6F6F6;
 $color-footer:#353535;
 $color-shadow: #c5c5c5;
+$color-hover:#f4edfe;
 
 /*Police de font*/
-@font-face {
-    font-family:"Shrikhand";
-    src: url(/police/Shrikhand/Shrikhand-Regular.ttf) format("truetype");
-}
-@font-face {
-    font-family: "Roboto";
-    src: url(/police/Roboto/Roboto-Regular.ttf) format("truetype");
-}
 $font-title:"Shrikhand", sans-serif;
 $font-text:"Roboto", sans-serif;
 
