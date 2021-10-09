@@ -281,6 +281,11 @@ figcaption {
   margin: 25px;
 }
 
+.order_btn {
+  margin: 25px 60px;
+  width: 60%;
+}
+
 /*Fonctionnement couleurs survol*/
 .step a:hover {
   background-color: #f4edfe;
@@ -291,55 +296,84 @@ figcaption {
 
 /*CSS chargement page*/
 .loader {
-  display: none;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: loader 2s linear 2s;
+  animation-fill-mode: both;
 }
 .loader img {
-  width: 100px;
+  width: 150px;
   height: 100px;
-  -webkit-animation: spin 2s linear infinite;
-  -o-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
   position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 10;
-  bottom: 0;
+  margin: 80% 80% 80% -8%;
+  animation: spin 2s linear 2s;
+  animation-fill-mode: both;
 }
 .loader_text {
-  color: #9356DC;
+  background: -webkit-linear-gradient(#dd7bd5, #9f63d5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-family: "Shrikhand", sans-serif;
-  font-size: 30px;
-  width: 50%;
-  height: 5%;
+  font-size: 40px;
+  width: 100%;
   position: absolute;
-  margin: auto;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  animation: text 3s linear infinite;
+  margin: 88% 0% 100% 30%;
+  animation: texte 2s linear 2s;
+  animation-fill-mode: both;
 }
 
 /*Animation chargement page*/
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes spin {
   0% {
     transform: retate(0deg);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     transform: rotate(360deg);
     opacity: 0;
-    transition: opacity infinite;
+  }
+}
+@keyframes texte {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /*Apparition carte restaurant*/
 .menu {
-  animation: menu 3s;
+  animation: menu 1.5s linear 1s;
+  animation-fill-mode: both;
 }
 
 @keyframes menu {
   0% {
     opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 1;
@@ -351,23 +385,59 @@ figcaption {
   margin-right: 15px;
   margin-top: 12px;
   font-size: 20px;
-}
-.food_heart .empty-icon::before, .menu_heart .empty-icon::before {
-  content: "\f004";
-  position: relative;
-  left: 25px;
   color: #9d9d9d;
 }
-.food_heart .empty-icon:hover::before, .menu_heart .empty-icon:hover::before {
+.food_heart input[type=checkbox],
+.food .full-icon, .menu_heart input[type=checkbox],
+.menu .full-icon {
   display: none;
 }
-.food_heart .full-icon::before, .menu_heart .full-icon::before {
-  content: "\f004";
-  position: relative;
-  color: #9356DC;
+.food_heart input[type=checkbox]:checked ~ .full-icon, .menu_heart input[type=checkbox]:checked ~ .full-icon {
+  display: inline-block;
+  animation: heart 0.5s 0.5s;
+  animation-fill-mode: both;
+  background: -webkit-linear-gradient(#9f63d5, #dd7bd5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform-origin: center;
+}
+.food_heart input[type=checkbox]:checked ~ .empty-icon, .menu_heart input[type=checkbox]:checked ~ .empty-icon {
+  display: none;
+}
+
+.menu_heart .full-icon {
+  display: none;
+}
+
+@keyframes heart {
+  0% {
+    height: 10%;
+  }
+  30% {
+    height: 30%;
+  }
+  60% {
+    height: 60%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+/*Animation coche*/
+.menu_card i {
+  display: block;
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  padding: 18px;
+  background-color: #99E2D0;
+  border-radius: 0 10px 10px 0;
+  left: 80%;
   opacity: 0;
 }
-.food_heart .full-icon:hover::before, .menu_heart .full-icon:hover::before {
+
+.menu_card i:hover {
   opacity: 1;
 }
 
