@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*Couleurs*/
 /*Police de font*/
 /*Type de font*/
@@ -18,15 +19,30 @@
 a, span, h3, h4 {
   font-size: 13px;
 }
+@media (min-width: 600px) {
+  a, span, h3, h4 {
+    font-size: 15px;
+  }
+}
 
 h1, h2 {
   font-size: 18px;
   font-weight: bold;
 }
+@media (min-width: 600px) {
+  h1, h2 {
+    font-size: 20px;
+  }
+}
 
 h3 {
   font-weight: bold;
   font-size: 15px;
+}
+@media (min-width: 600px) {
+  h3 {
+    font-size: 17px;
+  }
 }
 
 main {
@@ -46,11 +62,32 @@ main {
   padding: 20px;
   gap: 20px;
 }
+@media (min-width: 1200px) {
+  .step {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+  }
+}
 .step_btn {
   background: #F6F6F6;
   border-radius: 10px;
   padding: 25px;
   color: black;
+}
+@media (min-width: 600px) {
+  .step_btn {
+    width: 50%;
+    justify-content: center;
+    border-radius: 20px;
+    margin: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .step_btn {
+    grid-row: 2;
+    width: 70%;
+  }
 }
 .step_circle {
   position: absolute;
@@ -63,6 +100,12 @@ main {
   padding: 3px;
   text-align: center;
 }
+@media (min-width: 600px) {
+  .step_circle {
+    left: auto;
+    margin-left: -40px;
+  }
+}
 .step_icon {
   color: grey;
   margin: 8px;
@@ -71,6 +114,11 @@ main {
 .step_text {
   margin-left: 8px;
   font-weight: bold;
+}
+@media (min-width: 1200px) {
+  .step_title {
+    padding-bottom: 20px;
+  }
 }
 
 /*Restaurant*/
@@ -84,10 +132,28 @@ main {
 .food_title {
   padding-top: 20px;
 }
+@media (min-width: 1200px) {
+  .food_title {
+    padding-bottom: 20px;
+  }
+}
 .food_cards {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+@media (min-width: 600px) {
+  .food_cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+  }
+}
+@media (min-width: 1200px) {
+  .food_cards {
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+  }
 }
 .food_card {
   background-color: white;
@@ -124,14 +190,20 @@ figure {
 
 figcaption {
   display: inline-block;
-  position: relative;
-  top: -135px;
-  right: -215px;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: -65px;
+  justify-content: space-around;
   color: #307e61;
   font-weight: bold;
   font-size: 10px;
   background-color: #a9e0d1;
   padding: 5px 8px 5px 8px;
+}
+@media (min-width: 600px) {
+  figcaption {
+    font-size: 12px;
+  }
 }
 
 /*Pages restaurants*/
@@ -139,6 +211,16 @@ figcaption {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+@media (min-width: 600px) {
+  .menu {
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .menu {
+    grid-row: 2;
+  }
 }
 .menu_page {
   display: flex;
@@ -150,10 +232,35 @@ figcaption {
   border-radius: 30px 30px 0 0;
   gap: 20px;
 }
+@media (min-width: 600px) {
+  .menu_page {
+    padding: 5px 10px 30px 10px;
+    gap: 25px;
+  }
+}
+@media (min-width: 1200px) {
+  .menu_page {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+  }
+}
 .menu_title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+@media (min-width: 600px) {
+  .menu_title {
+    justify-content: center;
+  }
+}
+@media (min-width: 1200px) {
+  .menu_title {
+    grid-column: 2;
+    grid-row: 1;
+    margin: auto;
+  }
 }
 .menu_title h1, .menu_title span {
   font-size: 20px;
@@ -175,6 +282,11 @@ figcaption {
   border: solid #99E2D0 1px;
   width: 10%;
 }
+@media (min-width: 600px) {
+  .menu_underline {
+    width: 60%;
+  }
+}
 .menu_card {
   display: flex;
   flex-direction: row;
@@ -183,28 +295,56 @@ figcaption {
   justify-content: space-between;
   height: 55px;
 }
+@media (min-width: 600px) {
+  .menu_card {
+    width: 70%;
+  }
+}
 .menu_price {
   font-size: 13px;
   font-weight: bold;
   padding: 30px 12px 0 0;
 }
 .menu_legend {
+  display: inline;
   padding: 10px 0 10px 5px;
   line-height: 1.2rem;
 }
+.menu_legend .menu_check:hover .menu_legend h3, .menu_legend .menu_check:hover .menu_legend h4 {
+  width: 190px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+/*Logo et localisation*/
 .header {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-.header img {
+@media (max-width: 599px) {
+  .header {
+    align-items: center;
+  }
+}
+@media (min-width: 600px) {
+  .header {
+    align-items: center;
+  }
+}
+.header_img img {
   width: 100%;
+  z-index: -1;
 }
 .header_logo img {
   display: block;
   width: 150px;
   padding: 12px;
+}
+@media (min-width: 600px) {
+  .header_logo img {
+    width: 200px;
+  }
 }
 .header_search {
   background-color: #EAEAEA;
@@ -223,7 +363,9 @@ figcaption {
   font-family: "Roboto", sans-serif;
 }
 
+/*Partie "réservez"*/
 .reserve {
+  width: 100%;
   text-align: center;
   background-color: #F6F6F6;
   padding: 20px;
@@ -240,13 +382,20 @@ figcaption {
   font-size: 15px;
 }
 
+/*Flèche*/
 .arow i {
   position: absolute;
   color: black;
   left: 0;
   padding: 20px 0px 20px 15px;
 }
+@media (min-width: 600px) {
+  .arow i {
+    font-size: 20px;
+  }
+}
 
+/*Image restaurant*/
 .header_img {
   height: 180px;
 }
@@ -264,12 +413,30 @@ figcaption {
 }
 .footer_logo img {
   filter: invert(1);
-  max-width: 100px;
+  width: 100px;
+}
+@media (min-width: 600px) {
+  .footer_logo img {
+    width: 120px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer_logo img {
+    margin-left: 45%;
+  }
 }
 .footer_icon {
   filter: invert(1);
   height: 14px;
   margin-right: 8px;
+}
+@media (min-width: 600px) {
+  .footer_card {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 50px;
+    align-items: center;
+  }
 }
 
 .reserve_btn, .order_btn {
@@ -282,8 +449,19 @@ figcaption {
 }
 
 .order_btn {
-  margin: 25px 60px;
+  margin: auto;
   width: 60%;
+}
+@media (min-width: 600px) {
+  .order_btn {
+    width: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  .order_btn {
+    grid-column: 2;
+    grid-row: 3;
+  }
 }
 
 /*Fonctionnement couleurs survol*/
@@ -301,8 +479,7 @@ figcaption {
   width: 100%;
   height: 100%;
   background: #F6F6F6;
-  animation: loader 2s linear 3s;
-  animation-fill-mode: both;
+  animation: 2s linear 3s both loader;
 }
 .loader_img1 {
   width: 100%;
@@ -310,8 +487,7 @@ figcaption {
   margin: auto;
   bottom: 0%;
   position: absolute;
-  animation: texte 1.5s linear 0.8s;
-  animation-fill-mode: both;
+  animation: 1.5s linear 0.8s both texte;
 }
 .loader_img2 {
   width: 100%;
@@ -322,8 +498,7 @@ figcaption {
   left: 0;
   right: 0;
   bottom: 10%;
-  animation: spin 2s linear infinite;
-  animation-fill-mode: both;
+  animation: 2s linear infinite both spin;
 }
 .loader_text {
   background: -webkit-linear-gradient(#dd7bd5, #9f63d5);
@@ -334,9 +509,8 @@ figcaption {
   font-size: 40px;
   width: 100%;
   position: absolute;
-  margin: 0% 0% 0% 15%;
-  animation: texte 2s linear 0.8s;
-  animation-fill-mode: both;
+  text-align: center;
+  animation: 2s linear 0.8s both texte;
 }
 .loader_spin1 {
   width: 125px;
@@ -352,8 +526,7 @@ figcaption {
   border-right-color: #FF79DA;
   border-bottom-color: transparent;
   border-radius: 50%;
-  animation: spin-inverse 2s linear infinite;
-  animation-fill-mode: both;
+  animation: 2s linear infinite both spin-inverse;
 }
 .loader_spin2 {
   width: 140px;
@@ -369,8 +542,7 @@ figcaption {
   border-right-color: transparent;
   border-bottom-color: transparent;
   border-radius: 50%;
-  animation: spin 2s linear infinite;
-  animation-fill-mode: both;
+  animation: 2s linear infinite both spin;
 }
 .loader_spin3 {
   width: 155px;
@@ -386,8 +558,7 @@ figcaption {
   border-right-color: transparent;
   border-bottom-color: transparent;
   border-radius: 50%;
-  animation: spin-inverse 2s linear infinite;
-  animation-fill-mode: both;
+  animation: 2s linear infinite both spin-inverse;
 }
 
 /*Animation chargement page*/
@@ -447,9 +618,44 @@ figcaption {
   }
 }
 /*Apparition carte restaurant*/
-.menu {
-  animation: fadein 4s;
-  -webkit-animation: fadein 4s;
+.list {
+  animation: 0.4s ease-in 0.6s both fadein;
+}
+.list_1 {
+  animation: 0.8s ease-in 0.6s both fadein;
+}
+.list_2 {
+  animation: 1.2s ease-in 0.6s both fadein;
+}
+.list_3 {
+  animation: 1.4s ease-in 0.6s both fadein;
+}
+.list_4 {
+  animation: 1.6s ease-in 0.6s both fadein;
+}
+.list_5 {
+  animation: 1.8s ease-in 0.6s both fadein;
+}
+.list_6 {
+  animation: 2s ease-in 0.6s both fadein;
+}
+.list_7 {
+  animation: 2.2s ease-in 0.6s both fadein;
+}
+.list_8 {
+  animation: 2.4s ease-in 0.6s both fadein;
+}
+.list_9 {
+  animation: 2.6s ease-in 0.6s both fadein;
+}
+.list_10 {
+  animation: 2.8s ease-in 0.6s both fadein;
+}
+.list_11 {
+  animation: 3s ease-in 0.6s both fadein;
+}
+.list_12 {
+  animation: 3.2s ease-in 0.6s both fadein;
 }
 
 @keyframes fadein {
@@ -467,6 +673,11 @@ figcaption {
   margin-top: 12px;
   font-size: 20px;
   color: #9d9d9d;
+}
+@media (min-width: 600px) {
+  .food_heart, .menu_heart {
+    font-size: 25px;
+  }
 }
 .food_heart input[type=checkbox],
 .food .full-icon, .menu_heart input[type=checkbox],
@@ -509,21 +720,38 @@ figcaption {
   }
 }
 /*Animation coche*/
-.menu_card i {
+.menu_check {
   display: block;
   position: absolute;
   color: white;
   font-size: 20px;
-  padding: 18px;
+  padding: 10px;
   background-color: #99E2D0;
   border-radius: 0 10px 10px 0;
   left: 80%;
   opacity: 0;
 }
-.menu_card i:hover {
+.menu_check .check_icon {
+  padding: 8px 5px 8px 5px;
+}
+.menu_check:hover {
   opacity: 1;
+  left: 0%;
+  position: relative;
+  animation: slide-left 0.4s linear both;
+}
+.menu_check:hover .check_icon {
   transition: all 0.3s 0.3s;
-  transform: rotate(360deg);
+  transform: rotate(-360deg);
+}
+
+@keyframes slide-left {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 10%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
