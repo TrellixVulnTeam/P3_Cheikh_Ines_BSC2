@@ -3,12 +3,27 @@
     @include flex;
     padding: 20px;
     gap: 20px;
+        @include for-desktop {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto auto;
+        }
 
     &_btn {
         background: $color-background;
         border-radius: 10px;
         padding: 25px;
         color: black;
+            @include for-tablet {
+                width: 50%;
+                justify-content: center;
+                border-radius: 20px;
+                margin: auto;
+            }
+                @include for-desktop {
+                    grid-row: 2;
+                    width: 70%;
+                }
     }
 
     &_circle {
@@ -21,6 +36,10 @@
         background-color: $color-primary;
         padding: 3px;
         text-align: center;
+            @include for-tablet {
+                left: auto;
+                margin-left: -40px;
+            }
     }
 
     &_icon {
@@ -33,6 +52,12 @@
         margin-left: 8px;
         font-weight: $fontWeight;
     }
+
+    &_title {
+        @include for-desktop {
+            padding-bottom: 20px;
+        }
+    }
 }
 
 /*Restaurant*/
@@ -44,11 +69,23 @@
 
     &_title {
         padding-top: 20px;
+            @include for-desktop {
+                padding-bottom: 20px;
+            }
     }
 
     &_cards {
         @include flex;
         gap: 20px;
+            @include for-tablet {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto auto;
+            }
+                @include for-desktop {
+                    grid-template-columns: auto auto auto auto;
+                    grid-template-rows: auto;
+                }
     }
 
     &_card {
@@ -92,12 +129,16 @@ figure {
 
 figcaption {
     display: inline-block;
-    position: relative;
-    top: -135px;
-    right: -215px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -65px;
+    justify-content: space-around;
     color: #307e61;
     font-weight: bold;
     font-size: 10px;
     background-color: #a9e0d1;
     padding: 5px 8px 5px 8px;
+        @include for-tablet {
+            font-size: 12px;
+        }
 }

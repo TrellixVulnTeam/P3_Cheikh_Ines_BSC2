@@ -1,15 +1,25 @@
+/*Logo et localisation*/
 .header {
     @include flex;
-    align-items: center;
-
-    & img {
+    @include for-mobile {
+        align-items: center;
+    }
+    @include for-tablet {
+        align-items: center;
+    }
+    
+    &_img img {
         width: 100%;
+        z-index: -1;
     }
 
     &_logo img {
         display: block;
         width: 150px;
         padding: 12px;
+            @include for-tablet {
+                width:200px;
+            }  
     }
 
     &_search {
@@ -32,7 +42,9 @@
     }
 }
 
+/*Partie "réservez"*/
 .reserve {
+    width: 100%;
     text-align: center;
     background-color: $color-background;
     padding: 20px;
@@ -51,13 +63,18 @@
     }
 }
 
+/*Flèche*/
 .arow i{
     position: absolute;
     color: black;
     left: 0;
     padding: 20px 0px 20px 15px;
+        @include for-tablet {
+            font-size: 20px;
+        }
 }
 
+/*Image restaurant*/
 .header_img {
     height: 180px;
 }

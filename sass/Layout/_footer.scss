@@ -11,12 +11,27 @@
 
     &_logo img {
         filter: invert(1);
-        max-width: 100px;
+        width: 100px;
+        @include for-tablet {
+            width: 120px;
+        }
+        @include for-desktop {
+            margin-left: 45%;
+        }
     }
 
     &_icon {
         filter: invert(1);
         height: 14px;
         margin-right: 8px;
+    }
+
+    @include for-tablet {
+        &_card {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: 50px;
+            align-items: center;
+        }
     }
 }
