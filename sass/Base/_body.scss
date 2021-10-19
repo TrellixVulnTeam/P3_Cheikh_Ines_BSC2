@@ -10,16 +10,25 @@
 
 a, span, h3, h4 {
     font-size: 13px;
+    @include for-tablet {
+        font-size: 15px;
+    }
 }
 
 h1, h2 {
     font-size: $fontSize;
     font-weight: $fontWeight;
+    @include for-tablet {
+        font-size: 20px;
+    }
 }
 
 h3{
     font-weight: $fontWeight;
     font-size: 15px;
+    @include for-tablet {
+        font-size: 17px;
+    }
 }
 
 main {
@@ -27,6 +36,6 @@ main {
     gap: 40px;
 }
 
-.reserve_btn, .step_btn, .food_card, .menu_card{
+.reserve_btn, .step_btn, .food_card, .menu_card {
     @include shadow;
-  }
+}

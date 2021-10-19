@@ -3,6 +3,13 @@
 }
 
 .order_btn {
-    margin: 25px 60px;
+    margin: auto;
     width: 60%;
+        @include for-tablet {
+            width: 40%;
+        }
+            @include for-desktop {
+                grid-column: 2;
+                grid-row: 3;
+            }
 }

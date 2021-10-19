@@ -14,8 +14,7 @@
     width: 100%;
     height: 100%;
     background:$color-background;
-    animation: loader 2s linear 3s;
-    animation-fill-mode: both;
+    animation: 2s linear 3s both loader;
 
     &_img1 {
         width: 100%;
@@ -23,8 +22,7 @@
         margin: auto;
         bottom: 0%;
         position: absolute;
-        animation: texte 1.5s linear 0.8s;
-        animation-fill-mode: both;
+        animation: 1.5s linear 0.8s both texte;
     }
 
     &_img2 {
@@ -33,8 +31,7 @@
         position: absolute;
         margin: auto;
         top: 0; left: 0; right: 0; bottom: 10%;
-        animation: spin 2s linear infinite;
-        animation-fill-mode: both;
+        animation: 2s linear infinite both spin;
     }
 
     &_text {
@@ -46,9 +43,8 @@
         font-size: 40px;
         width: 100%;
         position: absolute;
-        margin: 0% 0% 0% 15%;
-        animation: texte 2s linear 0.8s;
-        animation-fill-mode: both;
+        text-align: center;
+        animation: 2s linear 0.8s both texte;
     }
 
     &_spin1 {
@@ -62,8 +58,7 @@
         border-right-color:$color-secondary;
         border-bottom-color: transparent;
         border-radius: 50%;
-        animation: spin-inverse 2s linear infinite;
-        animation-fill-mode: both;
+        animation: 2s linear infinite both spin-inverse;
     }
 
     &_spin2 {
@@ -77,8 +72,7 @@
         border-right-color: transparent;
         border-bottom-color: transparent;
         border-radius: 50%;
-        animation: spin 2s linear infinite;
-        animation-fill-mode: both;
+        animation: 2s linear infinite both spin;
     }
 
     &_spin3 {
@@ -92,8 +86,7 @@
         border-right-color: transparent;
         border-bottom-color: transparent;
         border-radius: 50%;
-        animation: spin-inverse 2s linear infinite;
-        animation-fill-mode: both;
+        animation: 2s linear infinite both spin-inverse;
     }
 }
 
@@ -165,11 +158,46 @@
 }
 
 /*Apparition carte restaurant*/
-.menu {
-    animation: fadein 4s;
-    -webkit-animation: fadein 4s;
-}
+.list {
+        animation: 0.4s ease-in 0.6s both fadein;
 
+    &_1 {
+        animation: 0.8s ease-in 0.6s both fadein; 
+    }
+    &_2 {
+        animation: 1.2s ease-in 0.6s both fadein;
+    }
+    &_3 {
+        animation: 1.4s ease-in 0.6s both fadein;
+    }
+    &_4 {
+        animation: 1.6s ease-in 0.6s both fadein;
+    }
+    &_5 {
+        animation: 1.8s ease-in 0.6s both fadein;
+    }
+    &_6 {
+        animation: 2s ease-in 0.6s both fadein;
+    }
+    &_7 {
+        animation: 2.2s ease-in 0.6s both fadein;
+    }
+    &_8 {
+        animation: 2.4s ease-in 0.6s both fadein;
+    }
+    &_9 {
+        animation: 2.6s ease-in 0.6s both fadein;
+    }
+    &_10 {
+        animation: 2.8s ease-in 0.6s both fadein;
+    }
+    &_11 {
+        animation: 3s ease-in 0.6s both fadein;
+    }
+    &_12 {
+        animation: 3.2s ease-in 0.6s both fadein;
+    }
+}
 
 @keyframes fadein {
     0% {
@@ -189,6 +217,9 @@
         margin-top: 12px;
         font-size: 20px;
         color: #9d9d9d;
+        @include for-tablet {
+            font-size: 25px;
+        }
     } 
 
     &_heart input[type="checkbox"],
@@ -240,20 +271,39 @@
 }
 
 /*Animation coche*/
-.menu_card i {
+.menu_check {
     display: block;
     position: absolute;
     color: white;
     font-size: 20px;
-    padding: 18px;
+    padding: 10px;
     background-color: $color-tirdiary;
     border-radius: 0 10px 10px 0;
     left: 80%;
     opacity: 0;
 
+    .check_icon {
+        padding: 8px 5px 8px 5px;
+    }
+
     &:hover {
     opacity: 1;
-    transition: all 0.3s 0.3s;
-    transform: rotate(360deg);
+    left: 0%;
+    position: relative;
+    animation: slide-left 0.4s linear both;
+
+    .check_icon {
+        transition: all 0.3s 0.3s;
+        transform: rotate(-360deg);
+    }
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 10%;
     }
 }

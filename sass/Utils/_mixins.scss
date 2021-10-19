@@ -20,7 +20,7 @@
 }
 
 /*Medias Queries*/
-@mixin for-phone-only {
+@mixin for-mobile {
     @media (max-width: 599px) { 
     @content; }
   }
@@ -30,10 +30,6 @@
   }
 @mixin for-desktop {
     @media (min-width: 1200px) { 
-    @content; }
-  }
-@mixin for-big-desktop {
-    @media (min-width: 1800px) { 
     @content; }
   }
   
