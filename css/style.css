@@ -182,6 +182,7 @@ main {
 .food_name {
   line-height: 1.2rem;
   padding: 5px 0 5px 8px;
+  color: black;
 }
 
 figure {
@@ -227,7 +228,7 @@ figcaption {
   flex-direction: column;
   position: relative;
   background-color: #F6F6F6;
-  margin-top: -10px;
+  margin-top: -25px;
   padding: 20px 10px 30px 10px;
   border-radius: 30px 30px 0 0;
   gap: 20px;
@@ -310,11 +311,8 @@ figcaption {
   padding: 10px 0 10px 5px;
   line-height: 1.2rem;
 }
-.menu_legend .menu_check:hover .menu_legend h3, .menu_legend .menu_check:hover .menu_legend h4 {
-  width: 190px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.menu_legend h3, .menu_legend h4 {
+  text-overflow: unset;
 }
 
 /*Logo et localisation*/
@@ -327,19 +325,21 @@ figcaption {
     align-items: center;
   }
 }
-@media (min-width: 600px) {
-  .header {
-    align-items: center;
-  }
-}
 .header_img img {
   width: 100%;
-  z-index: -1;
+  height: 100%;
+  object-fit: cover;
+}
+@media (min-width: 600px) {
+  .header_img img {
+    height: 400px;
+  }
 }
 .header_logo img {
   display: block;
   width: 150px;
   padding: 12px;
+  margin: auto;
 }
 @media (min-width: 600px) {
   .header_logo img {
@@ -395,11 +395,6 @@ figcaption {
   }
 }
 
-/*Image restaurant*/
-.header_img {
-  height: 180px;
-}
-
 .footer a {
   color: #fff;
 }
@@ -446,6 +441,7 @@ figcaption {
   padding: 13px;
   background: linear-gradient(#dd7bd5, #9f63d5);
   margin: 25px;
+  font-size: 13px;
 }
 
 .order_btn {
@@ -679,12 +675,12 @@ figcaption {
     font-size: 25px;
   }
 }
-.food_heart input[type=checkbox],
-.food .full-icon, .menu_heart input[type=checkbox],
+.food_heart > input[type=checkbox],
+.food .full-icon, .menu_heart > input[type=checkbox],
 .menu .full-icon {
   display: none;
 }
-.food_heart input[type=checkbox]:checked ~ .full-icon, .menu_heart input[type=checkbox]:checked ~ .full-icon {
+.food_heart > input[type=checkbox]:checked ~ .full-icon, .menu_heart > input[type=checkbox]:checked ~ .full-icon {
   display: inline-block;
   animation: heart 1.5s 1.5s;
   animation-fill-mode: both;
@@ -697,7 +693,7 @@ figcaption {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.food_heart input[type=checkbox]:checked ~ .empty-icon, .menu_heart input[type=checkbox]:checked ~ .empty-icon {
+.food_heart > input[type=checkbox]:checked ~ .empty-icon, .menu_heart > input[type=checkbox]:checked ~ .empty-icon {
   display: none;
 }
 
@@ -720,7 +716,13 @@ figcaption {
   }
 }
 /*Animation coche*/
-.menu_check {
+.menu_card:hover .menu_legend > h3, .menu_card:hover h4 {
+  width: 190px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu_card .menu_check {
   display: block;
   position: absolute;
   color: white;
@@ -731,16 +733,23 @@ figcaption {
   left: 80%;
   opacity: 0;
 }
-.menu_check .check_icon {
+@media (min-width: 1200px) {
+  .menu_card .menu_check {
+    left: auto;
+    margin-left: 20%;
+  }
+}
+.menu_card .menu_check .check_icon {
   padding: 8px 5px 8px 5px;
 }
-.menu_check:hover {
+.menu_card .menu_check:hover {
   opacity: 1;
   left: 0%;
+  margin-left: 0;
   position: relative;
   animation: slide-left 0.4s linear both;
 }
-.menu_check:hover .check_icon {
+.menu_card .menu_check:hover .check_icon {
   transition: all 0.3s 0.3s;
   transform: rotate(-360deg);
 }
