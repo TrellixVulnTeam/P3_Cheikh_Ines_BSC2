@@ -4,19 +4,21 @@
     @include for-mobile {
         align-items: center;
     }
-    @include for-tablet {
-        align-items: center;
-    }
     
     &_img img {
         width: 100%;
-        z-index: -1;
+        height: 100%;
+        object-fit: cover;
+            @include for-tablet {
+                height: 400px;
+            }
     }
 
     &_logo img {
         display: block;
         width: 150px;
         padding: 12px;
+        margin: auto;
             @include for-tablet {
                 width:200px;
             }  
@@ -72,9 +74,4 @@
         @include for-tablet {
             font-size: 20px;
         }
-}
-
-/*Image restaurant*/
-.header_img {
-    height: 180px;
 }

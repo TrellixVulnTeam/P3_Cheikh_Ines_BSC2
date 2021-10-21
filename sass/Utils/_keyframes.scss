@@ -222,12 +222,12 @@
         }
     } 
 
-    &_heart input[type="checkbox"],
+    &_heart > input[type="checkbox"],
             .full-icon {
             display: none;
             }
     
-            &_heart input[type="checkbox"]:checked ~ .full-icon
+            &_heart > input[type="checkbox"]:checked ~ .full-icon
             {
                 display: inline-block; 
                 animation: heart 1.5s 1.5s;
@@ -242,7 +242,7 @@
                 -webkit-text-fill-color: transparent;
             }
     
-            &_heart input[type="checkbox"]:checked ~ .empty-icon
+            &_heart > input[type="checkbox"]:checked ~ .empty-icon
             {
                 display: none;
             }
@@ -271,6 +271,17 @@
 }
 
 /*Animation coche*/
+.menu_card {
+    
+    &:hover {  
+        .menu_legend > h3 , h4{
+        width: 190px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}  
+
 .menu_check {
     display: block;
     position: absolute;
@@ -281,6 +292,10 @@
     border-radius: 0 10px 10px 0;
     left: 80%;
     opacity: 0;
+        @include for-desktop {
+            left: auto;
+            margin-left: 20%;
+        }
 
     .check_icon {
         padding: 8px 5px 8px 5px;
@@ -289,6 +304,7 @@
     &:hover {
     opacity: 1;
     left: 0%;
+    margin-left: 0;
     position: relative;
     animation: slide-left 0.4s linear both;
 
@@ -297,6 +313,7 @@
         transform: rotate(-360deg);
     }
     }
+}
 }
 
 @keyframes slide-left {
