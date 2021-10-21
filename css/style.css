@@ -301,6 +301,11 @@ figcaption {
     width: 70%;
   }
 }
+@media (min-width: 1200px) {
+  .menu_card {
+    width: 80%;
+  }
+}
 .menu_price {
   font-size: 13px;
   font-weight: bold;
