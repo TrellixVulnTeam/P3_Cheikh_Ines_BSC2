@@ -586,7 +586,7 @@ figcaption {
   }
   100% {
     opacity: 0;
-    z-index: -1;
+    z-index: -999;
   }
 }
 @keyframes spin {
@@ -596,7 +596,7 @@ figcaption {
   }
   100% {
     transform: rotate(360deg);
-    z-index: -1;
+    z-index: -999;
   }
 }
 @keyframes spin-inverse {
@@ -606,7 +606,7 @@ figcaption {
   }
   100% {
     transform: rotate(-360deg);
-    z-index: -1;
+    z-index: -999;
   }
 }
 @keyframes texte {
@@ -628,7 +628,7 @@ figcaption {
   }
   100% {
     width: 100%;
-    z-index: -1;
+    z-index: -999;
   }
 }
 /*Apparition carte restaurant*/
@@ -734,12 +734,6 @@ figcaption {
   }
 }
 /*Animation coche*/
-.menu_card:hover .menu_legend > h3, .menu_card:hover h4 {
-  width: 190px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .menu_card .menu_check {
   display: block;
   position: absolute;
@@ -761,14 +755,20 @@ figcaption {
 .menu_card .menu_check .check_icon {
   padding: 8px 5px 8px 5px;
 }
-.menu_card .menu_check:hover {
+.menu_card:hover .menu_legend > h3, .menu_card:hover h4 {
+  width: 190px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu_card:hover .menu_check {
   opacity: 1;
   left: 0%;
   margin-left: 0;
   position: relative;
   animation: slide-left 0.4s linear both;
 }
-.menu_card .menu_check:hover .check_icon {
+.menu_card:hover .menu_check .check_icon {
   transition: all 0.3s 0.3s;
   transform: rotate(-360deg);
 }
