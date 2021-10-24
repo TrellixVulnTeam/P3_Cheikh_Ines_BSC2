@@ -745,12 +745,6 @@ figcaption {
   left: 80%;
   opacity: 0;
 }
-@media (min-width: 1200px) {
-  .menu_card .menu_check {
-    left: auto;
-    margin-left: 20%;
-  }
-}
 .menu_card .menu_check .check_icon {
   padding: 8px 5px 8px 5px;
 }

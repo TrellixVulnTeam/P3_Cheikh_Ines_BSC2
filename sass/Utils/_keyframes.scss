@@ -283,10 +283,6 @@
         border-radius: 0 10px 10px 0;
         left: 80%;
         opacity: 0;
-            @include for-desktop {
-                left: auto;
-                margin-left: 20%;
-            }
 
         .check_icon {
             padding: 8px 5px 8px 5px;
